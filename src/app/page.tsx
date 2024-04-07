@@ -1,113 +1,51 @@
-import Image from "next/image";
+"use client";
+import React from 'react';
+import Typewriter from '@/components/Typewriter';
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+type pageProps = {
+  
+};
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+
+const Page:React.FC<pageProps> = () => {
+
+  const [heart, setHeart] = React.useState("rounded-full bg-black text-white flex items-center justify-center focus:outline-none transform transition-all duration-300 ease-in-out hover:scale-110 hover:bg-red-500 hover:h-40 hover:w-40");
+  const [frame, setFrame] = React.useState(1);
+  const onClick = () => {
+    setHeart("rounded-full bg-black text-white flex items-center justify-center focus:outline-none transition-all duration-700 ease-in-out translate-x-96 opacity-0");
+    setTimeout(() => {
+    setFrame(2);
+    }, 800);
+
+    setTimeout(() => {
+      setFrame(3);
+      }, 3500);
+  };
+
+  return<>
+  <div className="bg-black flex h-screen w-screen items-center text-white text-left text-2xl font-medium justify-center ">
+  {frame==1 ? <button onClick={onClick} 
+    className={heart}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      className="w-20 h-20"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 4.519a5.479 5.479 0 00-7.76 7.76L12 20.279l7.76-7.76a5.479 5.479 0 10-7.76-7.76z"
+      />
+    </svg>
+  </button> : frame==2 ? <Typewriter text="This is for you." delay={50} /> : <Typewriter text="I love you soooo much Hriddhisha, so soo sooo much, I've fallen so deep for you, I never thought I could. You're not the girl out of my dreams, you're a girl out of this world, I couldn't even imagine having someone like, being loved by someone like you. Your eyes are hypnotic, your smile is mesmerizing, your laugh melts my heart, your 'nais' are so cutee pigal jaata hoon. I care so much about you, you being happy means the world to me, when I see you cry, my heart just shatters. I want to be there for you everyday, every minute, every second. I don't want to let you go ever, I just want you, all of you. I want to be with you during your downs, I want to be with you during your ups. You are the best thing that has happened to me, you are the reason I want to wake up early in the morning just so I could meet you, you are the reason I want to work so hard so I can live with you in the future and keep you happy, you are the reason I'm the happiest I've ever been. You are so mature, you talk everything out with me, I never feel unheard, you listen to me, you always care for me, I still remember that day when I didn't come for the first 2 lectures you were worried sick, that was so foreign for me because nobody ever did this for me when I didn't come to college, I was about to cry when I saw your texts and calls. During the concert you were the only one who called and texted me (I know you asked Atharva and Anshuman to text me), I want to do so much for you, you mean the entire world to me, you are my world. Sapno ki raani bhi nahi hai tu, sapno ki devi hai mere liye, I can't live without you, I can't imagine a life without, every second without you is painful, I smell your perfume in your absence, I hear your laugh in your absence, I see your beautiful eyes jaha mein jau, literally prettier than the shiniest of diamonds. Your hugs are the greatest, when I hug you I feel at home and I feel so comfortable, when you slept on my lap I just wanted to stay there hamesha, when you hugged me tightly from the back on the scooty I was smiling so widely you couldn't see me, holding your hand makes me so happy, I feel so honoured to be able to hold 'your' hand. I don't flex that I have a 'girlfriend', I always flex about having 'Hriddhisha', having you means so much to me. The flowers are so so soo pretty, I am still so thankful for those flowers, I just didn't believe my eyes when I saw them, ki you pulled it out of the bouquet for me, in front of everyone. You made me feel so secured after I asked you if you're okay with everyone knowing, to the point that class ke saamne shaadi ke baare mein boldiya. I love our time together, the first date still feels unreal, a movie with you, pizza with you, you and the ocean, although sirf tujhe dekh paa raha tha since you're so captivating. I wanted to hold your hand during the movie but I was too nervous to do it, but when you did it by yourself I was literally smiling so widely (isiliye meine woh bache ka scene nahi dekha), when I hugged you at the end of the day, I didn't want to let you go, I just wanted to hold you and stay there hameshaaa. And that song, that song made me want you more, I never thought a song would bring this much happiness to me kabhi, I always listen to that song. You are my everything, my sunshine, my moonlight in the darkest night, the whitest fluffiest cloud in a blue sky, the colourful blooming flower standing out in a field of flowers, the prettiest mountain covered in snow out of all the mountains in the range, the calming river with clear water in the middle of a forest, the brightest star out of gazillion stars in the sky, the perfect snowflake during snowfall. I love you sooo sooo much Hriddhisha, literally so much. I love you babe." delay={30} />}
+  </div>
+</>
 }
+export default Page;
