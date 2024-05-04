@@ -52,7 +52,7 @@ const Page:React.FC<pageProps> = () => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="w-40 h-40"
+        className="sm:w-40 sm:h-40 w-20 h-20"
       >
         <path
           strokeLinecap="round"
@@ -71,7 +71,7 @@ const Page:React.FC<pageProps> = () => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="w-40 h-40"
+        className="sm:w-40 sm:h-40 w-20 h-20"
       >
         <path
           strokeLinecap="round"
