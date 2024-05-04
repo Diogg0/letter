@@ -39,6 +39,18 @@ const ImageViewer: React.FC<ImageViewerProps> = () => {
         }
     }, [count]);
 
+    useEffect(() => {
+        // Play the song when the component mounts
+        const audio = new Audio('song.mp3');
+        audio.play();
+
+        // Clean up the audio object on component unmount
+        return () => {
+            audio.pause();
+            audio.currentTime = 0;
+        };
+    }, []);
+
     return (
         <>
             {frame === 1 ? (
@@ -48,7 +60,8 @@ const ImageViewer: React.FC<ImageViewerProps> = () => {
                     alt={`Image ${count}`}
                 />
             ) : (
-                <Typewriter text="Thank you for everything babe, I love you sooo much! Happy 2nd Anniversary, I only want you, want you soo badly." delay={70} />                
+                <Typewriter text="Thank you for everything babe, I love you sooo much! Happy 2nd Anniversary, I want you sooo badly right now! 😘" delay={30}/>
+                
             )}
         </>
     );
