@@ -60,7 +60,7 @@ const ImageViewer: React.FC<ImageViewerProps> = () => {
                     alt={`Image ${count}`}
                 />
             ) : (
-                <Typewriter text="Thank you for everything babe, I love you sooo much! Happy 2nd Anniversary, I want you sooo badly right now! 😘" delay={30}/>
+                <Typewriter text="Thank you for everything babe, I love you sooo much! Happy 2nd Anniversary, I want you, and just you." delay={30}/>
                 
             )}
         </>
