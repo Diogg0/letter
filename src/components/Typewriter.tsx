@@ -27,7 +27,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, delay }) => {
   }, [currentIndex, delay, text]);
 
   return (
-    <span className="inline-block">
+    <span className="inline-block text-white text-2xl">
       {currentText}
     </span>
   );
