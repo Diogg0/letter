@@ -9,7 +9,7 @@ type pageProps = {
 
 
 
-const page:React.FC<pageProps> = () => {
+const Page:React.FC<pageProps> = () => {
 
     const [frame, setFrame] = useState(1);
     
@@ -23,4 +23,4 @@ const page:React.FC<pageProps> = () => {
         {frame == 1 ? <Typewriter text="This is for us." delay={70}/> : <ImageViewer/> }
     </div>
 }
-export default page;
+export default Page;
