@@ -44,7 +44,7 @@ const Page:React.FC<pageProps> = () => {
   return<>
   <div className="bg-black h-screen text-white flex w-screen items-center text-left text-2xl font-medium justify-center overflow-auto">
   {frame==1 ? 
-  <div className='flex space-x-40 h-full w-full items-center justify-center'> 
+  <div className='flex space-x-20 sm:space-x-40 h-full w-full items-center justify-center'> 
     <button onClick={onClick1} 
     className={`flex flex-col ${heart}`}>
       <svg
