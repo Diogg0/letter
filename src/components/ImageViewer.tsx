@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Typewriter from './Typewriter';
-
+import Image from 'next/image'
 type ImageViewerProps = {
     
 };
@@ -54,11 +54,12 @@ const ImageViewer: React.FC<ImageViewerProps> = () => {
     return (
         <>
             {frame === 1 ? (
-                <img
-                    className={`transition-transform transform duration-500 ease-in-out ${css}`}
-                    src={`polaroid-${count}.png`}
-                    alt={`Image ${count}`}
-                />
+                // <img
+                //     className={`transition-transform transform duration-500 ease-in-out ${css}`}
+                //     src={`polaroid-${count}.png`}
+                //     alt={`Image ${count}`}
+                // />
+                <Image src={`/polaroid-${count}.png`} alt={`Image ${count}`} width={400} height={500}/>
             ) : (
                 <Typewriter text="Thank you for everything babe, I love you sooo much! Happy 2nd Anniversary, I want you, and just you." delay={30}/>
                 
