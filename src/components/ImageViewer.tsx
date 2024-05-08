@@ -59,7 +59,7 @@ const ImageViewer: React.FC<ImageViewerProps> = () => {
                 //     src={`polaroid-${count}.png`}
                 //     alt={`Image ${count}`}
                 // />
-                <Image src={`/polaroid-${count}.png`} alt={`Image ${count}`} width={400} height={500}/>
+                <Image className={`transition-transform transform duration-500 ease-in-out ${css}`} src={`/polaroid-${count}.png`} alt={`Image ${count}`} width={400} height={500}/>
             ) : (
                 <Typewriter text="Thank you for everything babe, I love you sooo much! Happy 2nd Anniversary, I want you, and just you." delay={30}/>
                 
