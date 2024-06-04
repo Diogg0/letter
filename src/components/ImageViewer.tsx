@@ -42,14 +42,17 @@ const ImageViewer: React.FC<ImageViewerProps> = () => {
     useEffect(() => {
         // Play the song when the component mounts
         const audio = new Audio('song.mp3');
-        audio.play();
-
+        audio.play()
+          .then(() => console.log('Audio playback started'))
+          .catch(error => console.error('Error playing audio:', error));
+    
         // Clean up the audio object on component unmount
         return () => {
             audio.pause();
             audio.currentTime = 0;
         };
     }, []);
+    
 
     return (
         <>
