@@ -37,9 +37,14 @@ const Page:React.FC<pageProps> = () => {
     setTimeout(() => {
     router.push('/assigment-2')
     }, 800);
-
-
   };
+
+  const onClick3 = () => {
+    setHeart("rounded-full bg-black text-white flex items-center justify-center focus:outline-none transition-all duration-700 ease-in-out translate-x-96 opacity-0");
+    setTimeout(() => {
+    router.push('/assignment-3')
+    }, 800);
+  }
 
   return<>
   <div className="bg-black h-screen text-white flex w-screen items-center text-left text-2xl font-medium justify-center overflow-auto">
@@ -81,6 +86,25 @@ const Page:React.FC<pageProps> = () => {
         />
       </svg>
       <span className='text-white text-2xl'>Assignment-2</span>
+    </button> 
+
+    <button onClick={onClick3} 
+    className={`flex flex-col ${heart}`}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        className="sm:w-40 sm:h-40 w-20 h-20"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 4.519a5.479 5.479 0 00-7.76 7.76L12 20.279l7.76-7.76a5.479 5.479 0 10-7.76-7.76z"
+        />
+      </svg>
+      <span className='text-white text-2xl'>Assignment-3</span>
     </button> 
   </div>
   : frame==2 ? <Typewriter text="This is for you." delay={50} /> : frame==3 ? <Typewriter text={text} delay={50} /> : <>hi</> }

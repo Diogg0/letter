@@ -69,7 +69,7 @@ const HomePage: React.FC = () => {
         </form>
         {isSubmitted && <p className="text-red-500 mt-5">Incorrect</p>}
 
-        <button onClick={handleAnswerClick}>Click here for answer.</button>
+        <button onClick={handleAnswerClick}>Click here for answer</button>
     </>
     }
     {answer === 1 && <p><Typewriter text="This is how much he loves you." delay={50}></Typewriter></p>}
