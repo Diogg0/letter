@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
 
         return () => clearInterval(intervalId);
     } 
-  }, [speed, shouldStart, count]); // Dependency array
+  }, [speed, shouldStart, count, increment]); // Dependency array
 
   const handleAnswerClick = () => {
     
